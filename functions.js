@@ -7,7 +7,7 @@ button.addEventListener('click', changeState);
 function changeState() {
     if (!checkEmail(input.value)) {
         input.style.border = '2px solid hsl(0, 93%, 68%)';
-        span.style.display = 'block';
+        span.style.display = 'flex';
         icon.style.display = 'block';
     } else {
         span.style.display = 'none';

@@ -132,7 +132,6 @@ body {
   align-self: center;
   position: absolute;
   left: 455px;
-  
 }
 
 ::placeholder {
@@ -150,55 +149,106 @@ body {
   grid-area: img;
 }
 
-/* mobile design */
+/* =======================
+====== mobile design =====
+========================== */
 @media (max-width: 375px) {
   .container {
     display: grid;
+    grid-template-areas:
+      'logo'
+      'img'
+      'text'
+      'form';
     grid-template-columns: 1fr;
-    grid-template-rows: 10% 250px 20% 20% 20%;
+    grid-template-rows: 1fr 250px 2fr 1fr;
     height: 100vh;
     width: 100vw;
   }
 
-  .container__text--logo {
-    grid-column-start: 1;
-    grid-row-start: 1;
-    margin: 30px 0px 0px 30px;
-    height: 25px;
+  .container__logo {
+    grid-area: logo;
+    margin: 40px 0px 30px 30px;
+  }
+
+  .container__logo > img {
+    width: 104px;
+    height: 22px;
   }
 
   .container__img {
     background-image: url('./images/hero-mobile.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100vw;
+    grid-area: img;
     height: 250px;
-    grid-column-start: 1;
-    grid-row-start: 2;
+    width: 100vw;
+  }
+
+  .container__text {
+    grid-area: text;
+    text-align: center;
+    width: 100vw;
+    margin: 0;
   }
 
   .container__text--title {
     text-transform: uppercase;
     letter-spacing: 15px;
-    font-size: 10pt;
-    grid-column-start: 1;
-    grid-row-start: 3;
+    font-size: 14pt;
+    margin-top: 60px;
   }
 
   .container__text--subtitle {
     font-size: var(--body-size);
     color: var(--desaturated-red);
     font-weight: var(--font-light);
-    line-height: 10px;
-    grid-column-start: 1;
-    grid-row-start: 4;
+    margin: 20px;
+    line-height: 25px;
   }
 
-  .container__text--input {
-    display: flex;
-    grid-column-start: 1;
-    grid-row-start: 5;
+  .container__form {
+    grid-area: form;
+    width: 100vw;
+    margin: 0;
   }
+
+  form {
+    margin-bottom: 50px;
+  }
+
+  .container__form-input {
+    display: flex;
+    justify-content: center;
+  }
+
+  #input-email {
+    border-radius: 30px;
+    padding: 20px;
+    border: 1px solid #ddccd0;
+    outline: none;
+    width: 280px;
+  }
+
+  #input-btn {
+    right: 26px;
+  }
+
+  #input-icon {
+    display: none;
+    align-self: center;
+    position: absolute;
+    left: 220px;
+  }
+
+  #input-error {
+    display: none;
+    font-size: 10pt;
+    color: var(--soft-red);
+    margin: 10px 0 40px 0;
+    justify-content: center;
+  }
+
 }
 
 footer {
