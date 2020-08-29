@@ -15,8 +15,11 @@
 
   <div class="container">
 
+    <div class="container__logo">
+      <img src="./images/logo.svg" alt="logo base apparel">
+    </div>
+
     <div class="container__text">
-      <img class="container__text--logo" src="./images/logo.svg" alt="logo base apparel">
       <div class="container__text--title">
         <h1 id="text__title-first">We're</h1>
         <h1 id="text__title-second">coming<br>soon</h1>
@@ -26,22 +29,26 @@
         Add your email below to stay up-to-date with announcements and our launch deals.
       </div>
       <div class="container__text--input">
-        <form>
-          <div>
-            <input id="email-input" type="text" name="email" placeholder="Email Address" required>
-            <i><img id="input-icon" src="./images/icon-error.svg" alt="icon-error"></i>
-            <button type="button" id="email-btn">
-              <img class="text__input--img" src="./images/icon-arrow.svg" alt="arrow icon">
-          </div>
-          <span id="span__error">Please provide a valid email</span>
-          </button>
-        </form>
+
       </div>
     </div>
 
-    <div class="container__img">
-      <img src="./images/hero-desktop.jpg" alt="girl posing">
+    <div class="container__form">
+      <form>
+        <div class="container__form-input">
+          <input id="input-email" type="text" name="email" placeholder="Email Address" required>
+          <i id="input-icon"><img src="./images/icon-error.svg" alt="icon-error"></i>
+          <button type="button" id="input-btn">
+            <img class="input-btn-img" src="./images/icon-arrow.svg" alt="arrow icon">
+        </div>
+        <span id="input-error">Please provide a valid email</span>
+        </button>
+      </form>
     </div>
+
+    <div class="container__img">
+    </div>
+
   </div>
 
   <footer>

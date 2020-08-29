@@ -1,6 +1,6 @@
-let input = document.getElementById('email-input');
-let button = document.getElementById('email-btn');
-let span = document.getElementById('span__error');
+let input = document.getElementById('input-email');
+let button = document.getElementById('input-btn');
+let span = document.getElementById('input-error');
 let icon = document.getElementById('input-icon');
 button.addEventListener('click', changeState);
 
@@ -12,6 +12,7 @@ function changeState() {
     } else {
         span.style.display = 'none';
         icon.style.display = 'none';
+        input.style.border = 'none';
     }
 }
 
